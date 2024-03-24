@@ -20,14 +20,14 @@ from beets.plugins import BeetsPlugin, get_distance
 from PIL import Image
 
 
-def extend_reimport_fresh_fields_item():
-    """Extend the REIMPORT_FRESH_FIELDS_ITEM list so that these fields
-    are updated during reimport."""
-
-    importer.REIMPORT_FRESH_FIELDS_ITEM.extend([
-        'tidal_album_id', 'tidal_track_id', 'tidal_artist_id',
-        'tidal_track_popularity', 'tidal_alb_popularity',
-        'tidal_updated'])
+#def extend_reimport_fresh_fields_item():
+#    """Extend the REIMPORT_FRESH_FIELDS_ITEM list so that these fields
+#    are updated during reimport."""
+#
+#    importer.REIMPORT_FRESH_FIELDS_ITEM.extend([
+#        'tidal_album_id', 'tidal_track_id', 'tidal_artist_id',
+#        'tidal_track_popularity', 'tidal_alb_popularity',
+#        'tidal_updated'])
 
 
 class TidalPlugin(BeetsPlugin):
@@ -48,7 +48,7 @@ class TidalPlugin(BeetsPlugin):
         self.config.add({
             'source_weight': 0.5,
         })
-        extend_reimport_fresh_fields_item()
+        #extend_reimport_fresh_fields_item()
 
         # Adding defaults.
         config['tidal'].add({
